@@ -622,7 +622,7 @@
 				
 				<div id="innerborder">
 				
-				<div class="header centre">
+				<div class="header">
 					
 					<a href="/"><img src="{image:Header}" class="headerimage" alt=""/></a>
 					
@@ -632,7 +632,6 @@
 					
 					{block:Description}<div class="subtitle">{Description}</div>{/block:Description}
 					
-					<div class="linebreak"></div>
 					
 				</div> <!-- Subtitle -->
 				
@@ -720,37 +719,37 @@
 					            {block:IndexPage}
 						            <div class="photo">
 						            	{block:IfNotSingleColumn}
-						            	<img src="{PhotoURL-250}" alt="{PhotoAlt}"/>
+						            	<a href="{Permalink}" title="{PhotoAlt}">
+						            	  <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+						            	</a>
 						            	{/block:IfNotSingleColumn}
 						            	{block:IfSingleColumn}
-						            	<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+						            	<a href="{Permalink}" title="{PhotoAlt}">
+						            	  <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+						            	</a>
 						            	{/block:IfSingleColumn}
-							            	{block:Caption}
-							              	  {Caption}
-							            	{/block:Caption}
 							          </div>
- 
-						            <div class="timestamp" style="margin-top:10px;"><a href="{Permalink}">{TimeAgo}</a>{block:NoteCount} - <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>{/block:NoteCount}{block:ifDisqusShortname} - <a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a>{/block:IfDisqusShortname}</div>
-					            
-					            {/block:IndexPage}    
+					            {/block:IndexPage}
+					      
 						    
-								{block:PermalinkPage}					            	
-					            	<div class="centre photopage">
-						            	<p>{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}</p>
+								      {block:PermalinkPage}					            	
+					            	<div class="photopage">
+						            	<p>{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}</p>
 						            	{block:Caption}
 						              	  {Caption}
 						            	{/block:Caption}
 							            <p class="timestamp" style="margin-top:10px;"><a href="{Permalink}">{TimeAgo}</a></p>
 							            {block:PostNotes} {PostNotes}{/block:PostNotes}
 							            {block:IfDisqusShortname}
-									    <div id="disqus_thread"></div>
-									    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-									    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
-										{/block:IfDisqusShortname}
+									          <div id="disqus_thread"></div>
+									          <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+									          <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+										      {/block:IfDisqusShortname}
 						            </div>
 					            {/block:PermalinkPage}     
 						    </div>
 					    {/block:Photo} <!-- end PHOTO POST -->
+					    
 					    
 					    {block:Photoset}
 						    <div class="post">
@@ -910,7 +909,7 @@
 					{CurrentPage}&nbsp;&frasl;&nbsp;{TotalPages}
 					{block:PreviousPage}<a href="{PreviousPage}">&rarr; Newer</a>{/block:PreviousPage}
 				</p>
-				<p>- <a href="http://inkhorntheme.ptcampbell.me/">Inkhorn theme</a> powered by Tumblr -</p>
+				<p>- <a href="http://inkhorntheme.ptcampbell.me/">(a modified) Inkhorn theme</a> powered by Tumblr -</p>
 			</div> <!-- end FOOTER -->
 		
 		</div> <!-- end main -->
